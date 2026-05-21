@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { act } from "react";
+
 
 const storeTodos = localStorage.getItem("todos");
 
@@ -52,7 +52,7 @@ const todoSlice = createSlice({
     },
 
     isCompletedTodo: (state) => {
-      state.todos = state.todos.map((todo) => !todo.completed);
+      state.todos = state.todos.filter((todo) => !todo.completed);
       localStorage.setItem("todos", JSON.stringify(state.todos));
     },
 

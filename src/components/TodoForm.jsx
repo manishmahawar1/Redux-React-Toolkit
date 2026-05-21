@@ -26,7 +26,7 @@ export default function TodoForm() {
   });
 
   const handleAddTodo = () => {
-    if (!input.trim()) return;
+    if (!input.trim()) true;
 
     dispatch(addTodo(input));
     setInput("");
@@ -176,7 +176,7 @@ export default function TodoForm() {
 
           {filterTodos
             .filter((todo) =>
-              todo.text.toLowerCase().includes(search.toLowerCase()),
+              todo.text?.toLowerCase()?.includes(search?.toLowerCase()),
             )
             .map((todo) => (
               <div

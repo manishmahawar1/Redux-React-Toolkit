@@ -17,9 +17,7 @@ export default function Counter() {
       <button onClick={()=> dispatch(incrementByAmount(5))}>Increase By +5</button>
       <button onClick={()=> dispatch(incrementByAmount(10))}>Increase By +10</button>
       <button onClick={()=> dispatch(incrementByAmount(Number(inputValue)))}>Input Added</button>
-      <button onClick={()=> dispatch(reset())}>Reset</button>
-     
-      
+      <button onClick={()=> dispatch(reset())}>Reset</button> 
     </div>
   )
 }
